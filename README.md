@@ -11,10 +11,10 @@ The project is created to
 1. finish the [coding challenge](https://www.oschina.net/question/253880_2236467) I've raised to [@eechen](https://my.oschina.net/eechen).
 2. as companion project for my [blog](https://my.oschina.net/greenlaw110/blog/869927) on applying act-aaa plugin in an ActFramework application which demonstrates on the following feature of [ActFramework](http://actframework.org):
 
-1. Login/SignUp user
-2. Send welcome email and handle activation link
-3. Authentication/Authorisation/Auditing with [Act-AAA](https://github.com/actframework/act-aaa-plugin)
-4. The expressiveness of ActFramework. It takes only 261 lines of Java code to implement this project.
+    * Login/SignUp user
+    * Send welcome email and handle activation link
+    * Authentication/Authorisation/Auditing with [Act-AAA](https://github.com/actframework/act-aaa-plugin)
+    * The expressiveness of ActFramework. It takes only 261 lines of Java code to implement this project.
 
 ## Known issues
 
