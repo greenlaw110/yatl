@@ -35,6 +35,7 @@ public class LoginController extends Controller.Util {
             redirect("/login");
         }
         context.login(email);
+        redirect("/");
     }
 
     @GetAction("/sign_up")

@@ -49,6 +49,4 @@ public class TodoController extends AuthenticatedController {
         dao.delete(todo);
     }
 
-
-
 }
