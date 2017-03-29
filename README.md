@@ -9,7 +9,7 @@
 The project is created to 
 
 1. finish the [coding challenge](https://www.oschina.net/question/253880_2236467) I've raised to [@eechen](https://my.oschina.net/eechen).
-2. as companion project for my [blog](https://my.oschina.net/greenlaw110/blog/869927) on applying act-aaa plugin in an ActFramework application which demonstrates on the following feature of [ActFramework](http://actframework.org):
+2. as companion project for my [blog](https://my.oschina.net/greenlaw110/blog/869927) on applying [act-aaa plugin](https://github.com/actframework/act-aaa-plugin) in an [ActFramework](http://actframework.org) application which demonstrates on the following feature:
 
     * Login/SignUp user
     * Send welcome email and handle activation link
@@ -96,8 +96,9 @@ luog@luog-Satellite-P50-A:~/p/greenlaw110/yatl$ loc src
 
 **Note** 
 
-1. All benchmark are done using [wrk](https://github.com/wg/wrk) with 4 threads and 256 concurrent connections
-2. There are only one user signed up and one item in the user's todo list. This can filter out the impact of the database to some extend
+1. The environment is my local laptop: i7-4700MQ / 16GB RAM / 256 GB SSD / Linuxmint 18.1
+1. All benchmarks are done using [wrk](https://github.com/wg/wrk) with 4 threads and 256 concurrent connections for 5s. For each benchmark I run a couple of times to warm up the JVM and pick up the best one. 
+2. There are only one user signed up and one item in the user's todo list. This can filter out the impact of the database to a certain extend
 
 | Item | Throughput | Latency |
 | ---- | ---------- | ------- |
