@@ -22,14 +22,14 @@ See https://git.oschina.net/greenlaw110/yatl/issues
 
 ## Requirement
 
-1 It shall allow user to login/sign up
-2 It shall send welcome letter to user once user signed up
-3 It shall handle the request when user clicked the activation link in the welcome email. 
-4 It shall redirect user to login form if user hasn't logged in yet
-5 Once user logged in it shall display a list of TODO items associated with the user
-6 Each todo item has a subject to be displayed
-7 It shall allow logged in user to create new TODO item
-8 It shall allow logged in user to update his TODO item only
+1. It shall allow user to login/sign up
+2. It shall send welcome letter to user once user signed up
+3. It shall handle the request when user clicked the activation link in the welcome email. 
+4. It shall redirect user to login form if user hasn't logged in yet
+5. Once user logged in it shall display a list of TODO items associated with the user
+6. Each todo item has a subject to be displayed
+7. It shall allow logged in user to create new TODO item
+8. It shall allow logged in user to update his TODO item only
  
 ### non-functional requirements
 
