@@ -1,0 +1,24 @@
+<h1>Sign Up Form</h1>
+
+@if(_flash.error()) {
+<div class="alert alert-error">@_flash.error()</div>
+}
+
+<form action='/sign_up' method="post">
+  <div>
+    <input type="text" name="user.email" placeholder="your email">
+  </div>
+  <div>
+    <input type="text" name="user.firstName" placeholder="your first name">
+  </div>
+  <div>
+    <input type="text" name="user.lastName" placeholder="your last name">
+  </div>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>
+
+<p>
+  Already got an account? click on <a href="/login">here</a> to login.
+</p>

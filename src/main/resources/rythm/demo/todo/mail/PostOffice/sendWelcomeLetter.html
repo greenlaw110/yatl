@@ -1,0 +1,11 @@
+@args User user, String tk
+<p>
+  @user.fullName() 你好! 欢迎加入YATL. 请点击下面的链接激活您的账户
+</p>
+@assign(fullUrl) {@fullUrl({
+value: "demo.todo.controller.LoginController.activate",
+tk: tk
+})}
+<p>
+  <a href='@fullUrl'>@fullUrl</a>
+</p>

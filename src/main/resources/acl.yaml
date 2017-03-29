@@ -1,0 +1,15 @@
+create-todo-item:
+  type: permission
+  dynamic: false
+
+update-todo-item:
+  type: permission
+  dynamic: true
+
+view-todo-item:
+  type: permission
+  dynamic: true
+
+delete-todo-item:
+  type: permission
+  dynamic: true

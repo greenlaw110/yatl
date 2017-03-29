@@ -1,0 +1,72 @@
+@extends(layout)
+
+@section("moreCss") {
+<style>
+  #list {
+    list-style-type: none;
+  }
+  #list li {
+    margin: 15px;
+  }
+  #list a.btn {
+    padding: 2px 5px;
+    border: 1px solid #aaa;
+    cursor: pointer;
+  }
+  #list a.btn:hover {
+    background-color: #ccc;
+  }
+</style>
+}
+
+<h1>Yet Another Todo List</h1>
+
+<p>
+  @args User me
+  Good day @me.firstName!
+</p>
+
+<ul id="list">
+
+</ul>
+<button id="add">Add</button>
+<script>
+
+  var refresh = function() {
+    $.getJSON("/todo", function(data){
+      $('#list').html('');
+      for (var i = 0, j = data.length; i < j; ++i) {
+        var todo = data[i];
+        var $li = $('<li id="' + todo.id + '"><a class="edit btn">edit</a>&nbsp;<a class="delete btn">done</a>&nbsp;&nbsp;<span>' + todo.subject + '</span></li>');
+        $li.appendTo($('#list'));
+      }
+    })
+  };
+
+  $('#add').click(function() {
+    var subject = prompt("Input subject");
+    if (!subject) {
+      alert("Todo subject required");
+      return;
+    }
+    $.post("/todo", {subject: subject}, refresh);
+  });
+
+  $('body').on('click', '.btn.delete', function() {
+    var id = $(this).parent().attr('id');
+    $.delete('/todo/' + id, refresh);
+  });
+
+  $('body').on('click', '.btn.edit', function() {
+    var id = $(this).parent().attr('id');
+    var subject0 = $(this).parent().children('span').text();
+    var subject = prompt("Type in new subject", subject0);
+    if (!subject) {
+      alert("Todo subject required");
+      return;
+    }
+    $.put('/todo/' + id, {subject: subject}, refresh);
+  });
+
+  refresh();
+</script>

@@ -1,0 +1,18 @@
+<h1>Activate your account</h1>
+
+@if(_flash.error()) {
+<div class="alert alert-error">@_flash.error()</div>
+}
+
+<form action='/activate' method="post">
+  <div>
+    <input type="password" name="password" placeholder="Type in your password">
+  </div>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>
+
+<p>
+  No account? click on <a href="/sign_up">here</a> to sign up.
+</p>
