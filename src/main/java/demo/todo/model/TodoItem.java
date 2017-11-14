@@ -1,11 +1,17 @@
 package demo.todo.model;
 
-import act.db.morphia.MorphiaAdaptiveRecord;
-import act.db.morphia.MorphiaDao;
-import org.mongodb.morphia.annotations.Entity;
+import act.db.ebean2.EbeanDao;
 
-@Entity("todo")
-public class TodoItem extends MorphiaAdaptiveRecord<TodoItem> implements UserLinked {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity(name = "todo")
+public class TodoItem implements UserLinked {
+
+    @Id
+    @GeneratedValue
+    public long _id;
 
     public String subject;
 
@@ -20,7 +26,7 @@ public class TodoItem extends MorphiaAdaptiveRecord<TodoItem> implements UserLin
         this.subject = subject;
     }
 
-    public static class Dao extends MorphiaDao<TodoItem> {
+    public static class Dao extends EbeanDao<Long, TodoItem> {
 
     }
 
